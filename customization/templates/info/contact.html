@@ -1,0 +1,19 @@
+{# This template should be overridden using a city-specific template as described in the /readme.md #}
+
+{% extends 'base.html' %}
+
+{% load i18n %}
+
+{% block title %}{% trans "Contact" context "Contact page title" %}{% endblock %}
+
+{% block content %}
+{% trans "a" as contact_text %}
+    <article class="container infopage">
+        <h1>{% trans "Contact" context "Contact page h1" %}</h1>
+        <p>{{ contact_text }}</p>
+        <p>{% trans "E-Mail" context "Contact page" %}:
+            <a href="mailto:muenster@codefor.de?subject=M%C3%BCnster%20Transparent">muenster@codefor.de</a>
+            oder auf Twitter <a href="https://twitter.com/codeformuenster">@codeformuenster</a>
+        </p>
+    </article>
+{% endblock %}
