@@ -1,4 +1,4 @@
-FROM konstin2/meine-stadt-transparent:v0.2.0
+FROM konstin2/meine-stadt-transparent:v0.2.3
 
 ENV TEMPLATE_DIRS=customization/templates
 
