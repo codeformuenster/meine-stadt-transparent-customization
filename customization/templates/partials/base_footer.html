@@ -1,0 +1,30 @@
+{% load i18n %}
+<div class="container flex-column align-items-start">
+    <div>
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="https://codeformuenster.org/impressum/#impressum" target="_blank" rel="noopener">
+                    Impressum
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="https://codeformuenster.org/impressum/#datenschutz" target="_blank" rel="noopener">
+                    Datenschutzerklärung
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'info_about' %}">{% trans "About" context 'navigation' %}</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'info_feedback' %}">
+                    {% trans "Feedback" context 'navigation' %}
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div>
+        <div class="navbar-nav navbar-footer-disclaimer">
+            {{ settings.TEMPLATE_META.site_name }} {% trans 'is a private project and not authorized by any city council' %}
+        </div>
+    </div>
+</div>
