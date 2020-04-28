@@ -1,0 +1,13 @@
+$navbar-dark-color: #a0a3a5;
+$default-section-spacing: 20px;
+$font-size-base: 0.97rem;
+
+@import "../../../../mainapp/assets/css/mainapp";
+
+body {
+  background-color: #3a87ad;
+}
+
+.navbar-brand {
+  font-style: italic;
+}
