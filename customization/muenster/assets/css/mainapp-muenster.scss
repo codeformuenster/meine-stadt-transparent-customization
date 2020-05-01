@@ -1,13 +1,44 @@
-$navbar-dark-color: #a0a3a5;
 $default-section-spacing: 20px;
 $font-size-base: 0.97rem;
 
+$index-background:#FFFFFF;
+$index-color: #4a4a4a;
+
+$index-title-section-background: $index-background;
+$index-title-background: $index-background;
+$index-search-section-background: $index-background;
+$index-map-section-background: $index-background;
+$index-map-title-background: $index-background;
+$index-main-buttons-section-background: $index-background;
+$index-main-buttons-title-background: $index-background;
+$index-main-buttons-btn-background: $index-background;
+$index-meetings-section-background: $index-background;
+$index-meetings-title-background: $index-background;
+$index-documents-section-background: $index-background;
+$index-documents-title-background: $index-background;
+
+$index-title-color: $index-color;
+$index-search-text: $index-color;
+$index-map-title-color: $index-color;
+$index-main-buttons-title-color: $index-color;
+$index-main-buttons-btn-text: $index-color;
+$index-meetings-title-color: $index-color;
+$index-documents-title-color: $index-color;
+
+$container-max-widths: (
+  md: 1344px,
+);
+
 @import "../../../../mainapp/assets/css/mainapp";
 
-body {
-  background-color: #3a87ad;
+html {
+  text-rendering: optimizeLegibility;
 }
 
 .navbar-brand {
-  font-style: italic;
+  font-weight: bold;
+}
+
+.index-v2 .home-container-title-sm {
+  min-height: unset;
 }

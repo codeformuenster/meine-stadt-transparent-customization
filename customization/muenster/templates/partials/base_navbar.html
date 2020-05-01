@@ -1,5 +1,7 @@
 {% load i18n %}
+{% if main_content_id %}
 <a href="{% url 'index' %}" class="navbar-brand">Münster Transparent</a>
+{% endif %}
 <a href="{% url 'search' '' %}" class="navbar-toggler">
     <span class="fa fa-search"></span>
     <span class="sr-only">Search</span>
