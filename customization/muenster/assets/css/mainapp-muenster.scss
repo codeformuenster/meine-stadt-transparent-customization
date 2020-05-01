@@ -26,7 +26,11 @@ $index-meetings-title-color: $index-color;
 $index-documents-title-color: $index-color;
 
 $container-max-widths: (
-  md: 1344px,
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px
 );
 
 @import "../../../../mainapp/assets/css/mainapp";
