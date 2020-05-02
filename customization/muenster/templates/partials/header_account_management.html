@@ -5,7 +5,7 @@
        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         {% trans "My Account" context 'navigation' %}
     </a>
-    <form class="dropdown-menu" method="POST" action="{% url 'account_logout' %}"
+    <form class="dropdown-menu dropdown-menu-right" method="POST" action="{% url 'account_logout' %}"
           aria-labelledby="navbarMyAccount">
         {% csrf_token %}
         {% if redirect_field_value %}

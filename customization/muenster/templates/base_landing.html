@@ -24,7 +24,7 @@
 
         <nav class="navbar navbar-expand-lg navbar-expand-md navbar-light" id="main-menu">
             <div class="container">
-                {% include 'partials/base_navbar.html' %}
+                {% include 'partials/base_navbar.html' with disable_brand=True %}
             </div>
         </nav>
     {% endblock %}
