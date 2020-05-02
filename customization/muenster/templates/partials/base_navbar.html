@@ -12,21 +12,5 @@
 </button>
 
 <div class="collapse navbar-collapse" id="main-menu-content">
-    {% include 'partials/base_navbar_mainmenu.html' %}
-    {% if not disable_header_search %}
-        <form class="form-inline search-autocomplete" method="GET"
-              action="{% url 'search' '' %}">
-            <input class="form-control" type="text" name="query" value="" autocomplete="off"
-                   data-suggest-url="{% url 'search_autocomplete' 'SEARCH_TERM' %}"
-                   placeholder="{% trans "Search" context "page_title" %}"
-                   aria-label="{% trans "Search" context "perform search" %}"
-                   id="searchfield-mousetrap"
-                   title="{% trans 'Search (Alt+F)' %}"
-            >
-            <button class="search-icon fa fa-search" type="submit"
-                    title="{% trans 'Show search results' context 'aria label' %}">
-                <span class="sr-only">{% trans 'Show search results' context 'aria label' %}</span>
-            </button>
-        </form>
-    {% endif %}
+    {% include 'partials/base_navbar_mainmenu.html' with disable_header_search=disable_header_search%}
 </div>

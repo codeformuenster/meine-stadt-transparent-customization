@@ -43,6 +43,12 @@ html {
   font-weight: bold;
 }
 
+@media screen and (max-width: 360px) {
+  .navbar-brand {
+    font-size: $navbar-brand-font-size * 0.85;
+  }
+}
+
 .index-v2 .home-container-title-sm {
   min-height: unset;
 }
