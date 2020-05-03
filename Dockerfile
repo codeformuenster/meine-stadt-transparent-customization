@@ -1,14 +1,13 @@
 ARG MST_SOURCE_IMAGE=konstin2/meine-stadt-transparent:v0.2.5
 FROM ${MST_SOURCE_IMAGE} AS source
-FROM konstin2/meine-stadt-transparent@sha256:496607c9d036ba47c98f8369f6c1d4be7e2277fca65a0b51405c7dd337cc5271 AS source-latest
 FROM node:10 AS front-end
 
 ENV NODE_ENV=production \
   TEMPLATE_MAIN_CSS=mainapp-muenster
 WORKDIR /app
 
-COPY --from=source-latest /app/package.json /app/package.json
-COPY --from=source-latest /app/package-lock.json /app/package-lock.json
+COPY --from=source /app/package.json /app/package.json
+COPY --from=source /app/package-lock.json /app/package-lock.json
 
 RUN npm ci --dev
 
