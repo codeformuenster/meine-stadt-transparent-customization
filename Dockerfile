@@ -24,11 +24,6 @@ ENV TEMPLATE_DIRS=customization/muenster/templates \
 COPY --chown=www-data --from=front-end /app/customization /app/customization
 COPY --chown=www-data --from=front-end /app/mainapp/assets /app/mainapp/assets
 
-# Copy /static from the source, but change the owner.
-# Otherwise collectstatic in the next step fails because
-# in the original container /static is owned by root:root
-COPY --chown=www-data --from=source /static /static
-
 # compile translations,
 # execute collectstatic (https://github.com/meine-stadt-transparent/meine-stadt-transparent/blob/e9b09a0/meine_stadt_transparent/settings/__init__.py#L168-L172)
 # etc
