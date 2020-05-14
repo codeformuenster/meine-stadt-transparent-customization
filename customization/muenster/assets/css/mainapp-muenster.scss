@@ -57,6 +57,10 @@ html {
 .index-v2 {
   .home-container-title-sm {
     min-height: unset;
+    padding-bottom: 0;
+  }
+  .home-container-search-sm {
+    padding-top: 0;
   }
   .home-container-meetings {
     .meeting-button {

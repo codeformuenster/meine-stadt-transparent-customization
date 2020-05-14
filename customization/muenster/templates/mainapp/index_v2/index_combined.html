@@ -9,7 +9,7 @@
         <div class="container-meetings mb-4">
           <h2 class="home-section-header title-colors">{% trans "Next Meetings" context "Header" %}</h2>
           {% for meeting in next_meetings %}
-              <div class="meeting-col pb-3 pt-3">
+              <div class="meeting-col pb-4">
                   <a class="btn btn-block meeting-button shadow" href="{% url 'meeting' meeting.id %}">
                       <div class="row">
                           <div class="col-auto"><i class="fa fa-3x fa-calendar"></i></div>
