@@ -3,10 +3,10 @@
 
 <section class="home-container">
   <div class="container">
-    <div class="row no-gutters">
+    <div class="row">
       <div class="col">
 
-        <div class="container-meetings">
+        <div class="container-meetings mb-4">
           <h2 class="home-section-header title-colors">{% trans "Next Meetings" context "Header" %}</h2>
           {% for meeting in next_meetings %}
               <div class="meeting-col pb-3 pt-3">
@@ -29,7 +29,7 @@
           </div>
         </div>
 
-        <div class="">
+        <div>
           <a class="pull-right btn btn-sm btn-dark" href="{% url 'paper-feed' %}" title="{% trans "The latest papers as RSS-Feed" %}">
             <span class="fa fa-feed"></span>
             <span class="sr-only">RSS-Feed</span>
@@ -40,6 +40,7 @@
 
       </div>
       <div class="col">
+        <h2 class="home-section-header title-colors">Was passiert in meiner Nähe?</h2>
         <div id="leaflet-map" class="js-home-map" data-map-data="{{ map }}"
              data-more-file-1="{% trans "and 1 more file" %}" data-more-files-x="{% trans "and %NUM% more files" %}"
         ></div>
