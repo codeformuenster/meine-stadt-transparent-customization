@@ -1,4 +1,4 @@
-ARG MST_SOURCE_IMAGE=konstin2/meine-stadt-transparent:v0.2.7
+ARG MST_SOURCE_IMAGE=konstin2/meine-stadt-transparent:v0.2.8
 FROM ${MST_SOURCE_IMAGE} AS source
 FROM node:10 AS front-end
 
