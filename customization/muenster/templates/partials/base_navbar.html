@@ -1,0 +1,16 @@
+{% load i18n %}
+{% if not disable_brand %}
+<a href="{% url 'index' %}" class="navbar-brand">Münster Transparent</a>
+{% endif %}
+<a href="{% url 'search' '' %}" class="navbar-toggler">
+    <span class="fa fa-search"></span>
+    <span class="sr-only">Search</span>
+</a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu-content"
+        aria-controls="main-menu-content" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="main-menu-content">
+    {% include 'partials/base_navbar_mainmenu.html' with disable_header_search=disable_header_search%}
+</div>

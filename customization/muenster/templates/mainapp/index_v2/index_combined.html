@@ -1,0 +1,50 @@
+{% load i18n %}
+{% load humanize %}
+
+<section class="home-container">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+
+        <div class="container-meetings mb-4">
+          <h2 class="home-section-header title-colors">{% trans "Next Meetings" context "Header" %}</h2>
+          {% for meeting in next_meetings %}
+              <div class="meeting-col pb-4">
+                  <a class="btn btn-block meeting-button shadow" href="{% url 'meeting' meeting.id %}">
+                      <div class="row">
+                          <div class="col-auto"><i class="fa fa-3x fa-calendar"></i></div>
+                          <div class="col">
+                              <div class="title">{{ meeting.name }}</div>
+                              <div class="date">{{ meeting.start }}</div>
+                          </div>
+                      </div>
+                  </a>
+              </div>
+          {% endfor %}
+          <div class="more-info-link">
+              <a href="{% url 'calendar' %}">
+                  {% trans "All meetings in the calendar" %}
+                  <span class="fa fa-angle-right"></span>
+              </a>
+          </div>
+        </div>
+
+        <div>
+          <a class="pull-right btn btn-sm btn-dark" href="{% url 'paper-feed' %}" title="{% trans "The latest papers as RSS-Feed" %}">
+            <span class="fa fa-feed"></span>
+            <span class="sr-only">RSS-Feed</span>
+          </a>
+          <h2 class="home-section-header title-colors">{% trans "Latest Papers" context "Header" %}</h2>
+          {% include "partials/mixed_results.html" with results=latest_paper %}
+        </div>
+
+      </div>
+      <div class="col">
+        <h2 class="home-section-header title-colors">Was passiert in meiner Nähe?</h2>
+        <div id="leaflet-map" class="js-home-map" data-map-data="{{ map }}"
+             data-more-file-1="{% trans "and 1 more file" %}" data-more-files-x="{% trans "and %NUM% more files" %}"
+        ></div>
+      </div>
+    </div>
+  </div>
+</section>

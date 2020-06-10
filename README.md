@@ -1,6 +1,6 @@
 # WIP Meine Stadt Transparent customization
 
-This repository contains templates for customization of your [meine-stadt-transparent](https://github.com/meine-stadt-transparent/meine-stadt-transparent) instance.
+This repository contains customized templates for [meine-stadt-transparent.codeformuenster.org](https://meine-stadt-transparent.codeformuenster.org), a [meine-stadt-transparent](https://github.com/meine-stadt-transparent/meine-stadt-transparent) instance.
 
 ## Handling translations
 
