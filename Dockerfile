@@ -1,6 +1,6 @@
-ARG MST_SOURCE_IMAGE=konstin2/meine-stadt-transparent:v0.2.8
+ARG MST_SOURCE_IMAGE=konstin2/meine-stadt-transparent:v0.2.9
 FROM ${MST_SOURCE_IMAGE} AS source
-FROM node:10 AS front-end
+FROM node:14 AS front-end
 
 ENV NODE_ENV=production \
   TEMPLATE_MAIN_CSS=mainapp-muenster
