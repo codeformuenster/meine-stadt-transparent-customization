@@ -9,11 +9,14 @@ WORKDIR /app
 COPY --from=source /app/package.json /app/package.json
 COPY --from=source /app/package-lock.json /app/package-lock.json
 
-RUN npm ci --dev
+RUN npm ci --also=dev
 
 COPY --from=source /app/etc /app/etc
 COPY customization /app/customization
 COPY --from=source /app/mainapp/assets /app/mainapp/assets
+# fix webpack-merge import as long as PR hasn't been released
+# https://github.com/meine-stadt-transparent/meine-stadt-transparent/pull/650
+RUN sed -i 's|const merge|const {merge}|' /app/etc/webpack.config.common.js
 RUN npm run build:prod
 
 FROM ${MST_SOURCE_IMAGE}
